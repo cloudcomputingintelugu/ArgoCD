@@ -1,7 +1,9 @@
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: ccit-app
+  namespace: default
 spec:
   replicas: 3
   selector:
@@ -13,7 +15,7 @@ spec:
         app: ccit-app
     spec:
       containers:
-      - name: cont-1
-        image: cloudintelugu/ccitimage:v2
-        ports:
-        - containerPort: 80
+        - name: cont-1
+          image: cloudintelugu/ccitimage:v2
+          ports:
+            - containerPort: 80
