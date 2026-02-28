@@ -5,7 +5,7 @@ metadata:
   name: ccit-app
   namespace: default
 spec:
-  replicas: 8
+  replicas: 2
   selector:
     matchLabels:
       app: ccit-app
