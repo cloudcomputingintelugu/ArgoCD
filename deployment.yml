@@ -6,7 +6,7 @@ metadata:
   name: ccit-app
   namespace: default
 spec:
-  replicas: 3
+  replicas: 6
   selector:
     matchLabels:
       app: ccit-app
@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
         - name: cont-1
-          image: cloudintelugu/ccitimage:v1
+          image: cloudintelugu/ccitimage:v3
           ports:
             - containerPort: 80
