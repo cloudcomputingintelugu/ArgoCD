@@ -1,0 +1,22 @@
+# real webhook trigger testing
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ccit-app
+  namespace: default
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: ccit-app
+  template:
+    metadata:
+      labels:
+        app: ccit-app
+    spec:
+      containers:
+        - name: cont-1
+          image: cloudintelugu/githubrepos:v8
+          ports:
+            - containerPort: 5000
