@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
         - name: cont-1
-          image: cloudintelugu/githubrepos:build-20
+          image: cloudintelugu/githubrepos:build-21
           ports:
             - containerPort: 5000
